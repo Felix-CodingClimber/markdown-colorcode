@@ -7,26 +7,40 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Markdown.ColorCode", "Markd
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Markdown.ColorCode.UnitTests", "..\tests\Markdown.ColorCode.UnitTests\Markdown.ColorCode.UnitTests.csproj", "{C4A4653F-275A-42AC-8425-51D99F843511}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Markdown.ColorCode.Examples", "Markdown.ColorCode.Examples\Markdown.ColorCode.Examples.csproj", "{4B03AF76-7893-4B66-9270-624C4C16F251}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Markdown.ColorCode.Examples", "Markdown.ColorCode.Examples\Markdown.ColorCode.Examples.csproj", "{4B03AF76-7893-4B66-9270-624C4C16F251}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
+		Debug|x64 = Debug|x64
 		Release|Any CPU = Release|Any CPU
+		Release|x64 = Release|x64
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{7AD369ED-1626-4AAA-AE18-39209B8C7A9E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{7AD369ED-1626-4AAA-AE18-39209B8C7A9E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7AD369ED-1626-4AAA-AE18-39209B8C7A9E}.Debug|x64.ActiveCfg = Debug|x64
+		{7AD369ED-1626-4AAA-AE18-39209B8C7A9E}.Debug|x64.Build.0 = Debug|x64
 		{7AD369ED-1626-4AAA-AE18-39209B8C7A9E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7AD369ED-1626-4AAA-AE18-39209B8C7A9E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7AD369ED-1626-4AAA-AE18-39209B8C7A9E}.Release|x64.ActiveCfg = Release|x64
+		{7AD369ED-1626-4AAA-AE18-39209B8C7A9E}.Release|x64.Build.0 = Release|x64
 		{C4A4653F-275A-42AC-8425-51D99F843511}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{C4A4653F-275A-42AC-8425-51D99F843511}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C4A4653F-275A-42AC-8425-51D99F843511}.Debug|x64.ActiveCfg = Debug|x64
+		{C4A4653F-275A-42AC-8425-51D99F843511}.Debug|x64.Build.0 = Debug|x64
 		{C4A4653F-275A-42AC-8425-51D99F843511}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C4A4653F-275A-42AC-8425-51D99F843511}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C4A4653F-275A-42AC-8425-51D99F843511}.Release|x64.ActiveCfg = Release|x64
+		{C4A4653F-275A-42AC-8425-51D99F843511}.Release|x64.Build.0 = Release|x64
 		{4B03AF76-7893-4B66-9270-624C4C16F251}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{4B03AF76-7893-4B66-9270-624C4C16F251}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4B03AF76-7893-4B66-9270-624C4C16F251}.Debug|x64.ActiveCfg = Debug|x64
+		{4B03AF76-7893-4B66-9270-624C4C16F251}.Debug|x64.Build.0 = Debug|x64
 		{4B03AF76-7893-4B66-9270-624C4C16F251}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4B03AF76-7893-4B66-9270-624C4C16F251}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4B03AF76-7893-4B66-9270-624C4C16F251}.Release|x64.ActiveCfg = Release|x64
+		{4B03AF76-7893-4B66-9270-624C4C16F251}.Release|x64.Build.0 = Release|x64
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

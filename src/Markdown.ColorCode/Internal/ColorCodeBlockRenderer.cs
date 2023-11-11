@@ -47,11 +47,7 @@ internal sealed class ColorCodeBlockRenderer : HtmlObjectRenderer<CodeBlock>
         var language = _languageExtractor.ExtractLanguage(fencedCodeBlock, fencedCodeBlockParser);
 
         if (language is null)
-        {
-            _underlyingCodeBlockRenderer.Write(renderer, codeBlock);
-
-            return;
-        }
+            language = new LanguageNone();
 
         var code = _codeExtractor.ExtractCode(codeBlock);
         var formattedCodeAsHtml = _htmlFormatter.GetHtmlString(code, language);
@@ -60,14 +56,25 @@ internal sealed class ColorCodeBlockRenderer : HtmlObjectRenderer<CodeBlock>
         renderer.Write("<FencedCodeBlock")
             .WriteAttributes(new HtmlAttributes()
             {
-                Properties = new ()
-                {
-                    new ("RawContent", code),
-                    new ("Language", language.Name),
-                }
+                Properties =
+                [
+                    new("RawContent", code),
+                    new("Language", language.Name),
+                ]
+            })
+        .Write(">");
+        renderer.Write("<div")
+            .WriteAttributes(new HtmlAttributes()
+            {
+                Classes =
+                [
+                    "fenced-code-block-content",
+                    "container-scrollbars"
+                ]
             })
         .Write(">");
         renderer.Write(formattedCodeAsHtml);
+        renderer.Write("</div>");
         renderer.Write("</FencedCodeBlock>");
     }
 }
