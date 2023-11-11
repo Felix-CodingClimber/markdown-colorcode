@@ -47,7 +47,11 @@ internal sealed class ColorCodeBlockRenderer : HtmlObjectRenderer<CodeBlock>
         var language = _languageExtractor.ExtractLanguage(fencedCodeBlock, fencedCodeBlockParser);
 
         if (language is null)
-            language = new LanguageNone();
+        {
+            _underlyingCodeBlockRenderer.Write(renderer, codeBlock);
+
+            return;
+        }
 
         var code = _codeExtractor.ExtractCode(codeBlock);
         var formattedCodeAsHtml = _htmlFormatter.GetHtmlString(code, language);

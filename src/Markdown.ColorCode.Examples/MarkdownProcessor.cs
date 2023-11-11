@@ -1,6 +1,4 @@
 ﻿using Markdig;
-using Markdig.Renderers.Html;
-using Markdig.Syntax;
 
 namespace Markdown.ColorCode.Examples;
 
@@ -12,7 +10,8 @@ internal class MarkdownProcessor
     {
 
         pipeline = new MarkdownPipelineBuilder()
-            .UseColorCode()
+            .UseAdvancedExtensions()
+            .UseColorCode(additionalLanguages: [new LanguagePlainText()], defaultLanguageId: LanguagePlainText.LangId)
             .Build();
     }
 
